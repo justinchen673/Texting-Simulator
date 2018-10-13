@@ -1,13 +1,6 @@
 import json
 import operator
 import string
-import nltk
-from nltk.corpus import wordnet as wn
-from nltk import pos_tag, word_tokenize
-
-#nltk.download('wordnet')
-#nltk.download('punkt')
-#nltk.download('averaged_perceptron_tagger')
 
 # TODO: Get rid of hyperlinks, which are either https:// or http://
 #       Punctuation still isn't removed? work on that, and symbols like < > : ;
@@ -18,7 +11,7 @@ from nltk import pos_tag, word_tokenize
 #       emojis & stickers or "like" button
 
 
-'''
+
 # loads the json into a table
 with open('../Data/mcchickens.json') as f:
     data = json.load(f)
@@ -59,18 +52,3 @@ for x in sortedWords:
 print(len(data["messages"]), "messages")
 print(wordCount, "words")
 
-nouns = {x.name().split('.', 1)[0] for x in wn.all_synsets('NN')}
-#verbs = {x.name().split('.', 1)[0] for x in wn.all_synsets('v')}
-#pronouns = {x.name().split('.', 1)[0] for x in wn.all_synsets('')}
-
-asdf = "light" in nouns
-print(asdf)
-'''
-text = word_tokenize("My name is Justin")
-text = nltk.pos_tag(text)
-for i in text:
-    print(i[1])
-#print(text)
-
-#[('They', 'PRP'), ('refuse', 'VBP'), ('to', 'TO'), ('permit', 'VB'), ('us', 'PRP'),
-#('to', 'TO'), ('obtain', 'VB'), ('the', 'DT'), ('refuse', 'NN'), ('permit', 'NN')]
